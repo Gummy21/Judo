@@ -1,0 +1,71 @@
+$primary-color:#073b4c;
+
+.home-header {
+    background-color: $primary-color;
+    width:100%;
+    height:40vh;
+    display:flex;
+    justify-content: center;
+    color:white;
+    
+    h1 {
+        margin:0;
+        padding-top:1em;
+    }
+}
+
+.site-description{
+    background-color: #E8E6E6;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    padding-top:1em;
+    letter-spacing:0.1em;
+    p{
+        margin:0;
+    }
+}
+
+.filter{
+    margin:2rem 0 ;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.cards {
+    padding:0 0.5em;
+     ;
+
+}
+
+.card {
+    margin:5rem 0;
+    width:100%;
+
+    h2 {
+        text-align:left;
+        padding-left:0.5rem;
+    }
+    
+    .card-bot {
+    
+        text-align: center;
+    }
+    
+
+    #card-img {
+        height:auto;
+        width:100%;
+        border-radius:10px
+    }
+    button {
+        border-radius:10px;
+        border:0;
+        color:white;
+        background: #3b6578;
+        padding:0.8em;
+    }
+
+   
+}
