@@ -7,4 +7,14 @@ html,body {
     padding:0;
     font-family: 'Sora', sans-serif;
     min-height:100vh;
+    color:#12293D;
+}
+
+
+
+@media (min-width:1024px){ 
+    html,body {
+        font-size: 18px; 
+    }
+
 }

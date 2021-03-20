@@ -6,52 +6,53 @@
 <main>
   <section class="site-description">
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dolorum
-      numquam maxime corporis, porro neque reprehenderit amet assumenda, esse
-      qui consequuntur. Cupiditate labore doloribus quos quasi, ipsam
-      voluptatibus alias nostrum.
+      Judo is a popular sport and martial art created by Professor Jigoro Kano. 
+      The name Judo was chosen because it means the “gentle or yielding way”.
+      It was introduced into the Olympic Games in 1964.
+      <br>
+      <br/>
+      Judo has a number of different throwing, grapping, holding techniques
+      which are divied by the different (waza) technique  names.
     </p>
   </section>
   <section class="filter">
-    <select>
-      <option>One</option>
-      <option>Two</option>
-      <option>Three</option>
-      <option></option>
-      <option></option>
-      <option></option>
-      <option></option>
-      <option></option>
+   
+    <select >
+      <option>Wazas (Techniques)</option>
+      <option disabled>Throwing Techniques / Nage-Waza</option>
+      <option disabled>Tachi-Waza (Standing Techniques) </option>
+      <option>Te-Waza (Hand Techniques)</option>
+      <option>Ashi-Waza (Foot Techniques)</option>
+      <option>Koshi-Waza (Hip Techniques)</option>
+      <option disabled>Sutemi-Waza (Sacrifice Techniques)</option>
+      <option>Ma-Sutemi-Waza (Back Sacrifice)</option>
+      <option>Yoko-Sutemi-Waza (Side Sacrifice)</option>
+      <option disabled>Grappling Techniques / Katame-Waza</option>
+      <option>Osaekomi-Waza (Pinning Techniques)</option>
+      <option>Shime-Waza (Choking Techniques)</option>
+      <option>Kansetsu-Waza (Joint Locking Techniques)</option>
     </select>
-    <input />
-    <button>Search</button>
+    <input required="" placeholder="Name of Judo move" type="text"/>
+  
+    <button>Apply</button>
   </section>
 
   <section class="cards">
     
-      <div class="card">
-        <h2>Name</h2>
-        <img src="../../assets/Poster.jpg" srcset="" id="card-img" />
+      <div class="card" *ngFor="let move of judo">
+        
+        <img src={{move.img}} srcset="" id="card-img" />
         <div class="card-bot">
+          <h2>{{move.name}}</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-            sapiente, vel officiis molestiae modi voluptatibus? Vit
+            {{move.description}}
           </p>
-          <button routerLink="../detail/1">See full</button>
+          <button routerLink="../detail/{{move.id}}">See full</button>
         </div>
       </div>
       
 
 
-    <div class="card">
-      <h2>Name</h2>
-      <img src="../../assets/Poster.jpg" srcset="" id="card-img" />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sapiente,
-        vel officiis molestiae modi voluptatibus? Vit
-      </p>
-      <button routerLink="../details/1"></button>
-    </div>
   </section>
 </main>
 

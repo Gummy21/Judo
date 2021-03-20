@@ -1,13 +1,16 @@
 <main>
-    <article>
-        <section class="video"></section>
+    <article *ngFor="let single of move">
+        <section class="video">
+            <iframe id="video" [src]="safe"> </iframe> 
+        </section>
         <section class="description">
+            <h1>{{single.name}}</h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae itaque, corrupti iste tempora explicabo autem, quis deserunt commodi quidem non distinctio voluptatem velit modi recusandae! Provident, adipisci cumque! In, minus!
+               {{single.description}}
             </p>
         </section>
         <section class="img">
-            <img src="../../assets/Poster.jpg" alt="" srcset="">
+            <img src="{{single.img}}" alt="" srcset="">
         </section>
     </article>
 </main>

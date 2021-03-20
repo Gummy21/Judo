@@ -5,19 +5,75 @@ main {
 
 .video{
     height: 40vh;
-    border:1px solid black;
-    width:100%
+    width:100%;
+    
+   
+    iframe{
+        height: 100%;
+        width:100%;
+    }
 }
+
+
 
 .description {
     padding:1em 0;
     letter-spacing:0.1em;
+    font-size:14px;
 
+    h1 {
+        text-align: left;
+    }
 }
 
 .img {
     img{
     width:100%;
     height:auto;
+    }
+}
+
+
+@media (min-width:768px){
+    main {
+        padding:2em 4em;
+    }
+    .video {
+        padding-bottom: 2em;
+    }
+    .description {
+        padding-bottom: 2em;
+        font-size:16px;
+    }
+    .img{
+        padding-bottom:2em;
+    }
+
+
+}
+
+@media (min-width:1024px){
+    main {
+        padding:2em 10rem;
+    }
+
+    .video {
+        padding-bottom: 4em;
+        height: 60vh;
+
+    }
+    .description {
+        padding-bottom: 4em;
+        font-size:1.2rem;
+        text-align:center;
+    }
+    .img{
+        padding-bottom:4em;
+    }
+}
+
+@media (min-width:1444px){
+    main {
+        padding:2em 20%;
     }
 }

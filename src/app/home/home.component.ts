@@ -15,9 +15,9 @@ import { takeUntil } from 'rxjs/operators';
 
 export class HomeComponent implements OnInit, OnDestroy {
   private unsub: Subject<any> = new Subject();
-  category:string = '';
+  category:number = 0;
   name:string = '';
-  judo: object = {};
+  judo:any;
 
 
   constructor(private judoService:JudoService) { }

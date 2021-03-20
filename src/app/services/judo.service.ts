@@ -11,8 +11,8 @@ export class JudoService {
 
   constructor(private http: HttpClient) { }
 
-  getMoves(category:string,name:string ){
-    return this.http.get(`${this.API_URL}?category=${category}&name=${name}`)
+  getMoves(category:number,name:string ){
+    return this.http.get(`${this.API_URL}/moves?category=${category}&name=${name}`)
   }
 
   getSingle(id:number ){
