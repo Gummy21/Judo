@@ -2,7 +2,7 @@ import { Component, OnInit,OnDestroy } from '@angular/core';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { DomSanitizer } from '@angular/platform-browser';
-
+import { ActivatedRoute } from '@angular/router';
 import { JudoService } from '../services/judo.service'
 
 
@@ -13,11 +13,11 @@ import { JudoService } from '../services/judo.service'
 })
 export class DetailsComponent implements OnInit,OnDestroy {
   private unsub: Subject<any> = new Subject();
-  id:number = 1;
   move:any;
   video:any;
   safe:any;
-  constructor(private judoService:JudoService, private dom: DomSanitizer) { }
+  id: any = this.route.snapshot.paramMap.get('id')
+  constructor(private judoService:JudoService, private dom: DomSanitizer, private route: ActivatedRoute) { }
 
 
   ngOnInit() {
