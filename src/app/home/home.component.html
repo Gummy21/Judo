@@ -17,24 +17,22 @@
   </section>
   <section class="filter">
    
-    <select >
-      <option>Wazas (Techniques)</option>
+    <select [(ngModel)]="category">
+      <option selected value="0">Wazas (Techniques)</option>
       <option disabled>Throwing Techniques / Nage-Waza</option>
-      <option disabled>Tachi-Waza (Standing Techniques) </option>
-      <option>Te-Waza (Hand Techniques)</option>
-      <option>Ashi-Waza (Foot Techniques)</option>
-      <option>Koshi-Waza (Hip Techniques)</option>
-      <option disabled>Sutemi-Waza (Sacrifice Techniques)</option>
-      <option>Ma-Sutemi-Waza (Back Sacrifice)</option>
-      <option>Yoko-Sutemi-Waza (Side Sacrifice)</option>
+      <option value="1">Te-Waza (Hand Techniques)</option>
+      <option value="2">Koshi-Waza (Hip Techniques)</option>
+      <option value="3">Ashi-Waza (Foot Techniques)</option>
+      <option value="4">Ma-Sutemi-Waza (Back Sacrifice)</option>
+      <option value="5">Yoko-Sutemi-Waza (Side Sacrifice)</option>
       <option disabled>Grappling Techniques / Katame-Waza</option>
-      <option>Osaekomi-Waza (Pinning Techniques)</option>
-      <option>Shime-Waza (Choking Techniques)</option>
-      <option>Kansetsu-Waza (Joint Locking Techniques)</option>
+      <option value="6">Osaekomi-Waza (Pinning Techniques)</option>
+      <option value="7">Shime-Waza (Choking Techniques)</option>
+      <option value="8">Kansetsu-Waza (Joint Locking Techniques)</option>
     </select>
     <input required="" placeholder="Name of Judo move" type="text"/>
   
-    <button>Apply</button>
+    <button (click)="filter()">Apply</button>
   </section>
 
   <section class="cards">

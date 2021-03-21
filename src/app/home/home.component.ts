@@ -24,14 +24,19 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(private judoService:JudoService) { }
 
   ngOnInit(){
-    
+   
     this.judoService.getMoves(this.category,this.name).pipe(takeUntil(this.unsub)).subscribe(moves =>{
       console.log(moves)
       this.judo = moves
     })
   }
 
- 
+  filter(){
+    this.judoService.getMoves(this.category,this.name).pipe(takeUntil(this.unsub)).subscribe(moves =>{
+      console.log(moves)
+      this.judo = moves
+    });
+  }
 
   ngOnDestroy(){
     this.unsub.next()
