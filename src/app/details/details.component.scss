@@ -1,15 +1,18 @@
 main {
-    padding:2em;
+    padding:1em;
     margin-bottom: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .video{
     height: 40vh;
     width:100%;
-    border:none;
+    
     
    
     iframe{
+        border:none;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         height: 100%;
         width:100%;
     }
@@ -18,12 +21,16 @@ main {
 
 
 .description {
-    padding:1em 0;
+    padding:3em 0;
     letter-spacing:0.1em;
     font-size:14px;
 
     h1 {
         text-align: left;
+        font-size:1.4em;
+    }
+    p {
+        letter-spacing: 0.15em;
     }
 }
 
@@ -55,26 +62,54 @@ main {
 
 @media (min-width:1024px){
     main {
-        padding:2em 10rem;
+        padding:2em 2em;
     }
-
+    article {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
     .video {
         padding-bottom: 4em;
         height: 60vh;
-
+        width:55%;
+        order:2;
     }
     .description {
-        padding-bottom: 4em;
+        
+        padding:0 10% 4em 0;
         font-size:1.2rem;
         text-align:center;
+        width:35%;
+        order:1;
+
+        h1 {
+            margin:0;
+            text-align:center;
+        }
     }
     .img{
         padding-bottom:4em;
+        order:3;
+        width:100%;
+        height:auto;
     }
 }
 
 @media (min-width:1444px){
     main {
-        padding:2em 20%;
+        padding:4em 2em;
+    }
+    article {
+        justify-content: center;
+    }
+    video {
+        height:50vh;
+    }
+    .description {
+        font-size:1.4rem;
+    }
+    .img{
+        width:60%;
     }
 }

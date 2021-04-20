@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy} from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener} from '@angular/core';
 import { JudoService } from '../services/judo.service'
 
 import { Subject } from 'rxjs';
@@ -19,7 +19,13 @@ export class HomeComponent implements OnInit, OnDestroy {
   category:number = 0;
   name:string = '';
   judo:any;
- 
+  isSticky: boolean = false;
+
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    this.isSticky = window.pageYOffset >= 450;
+    console.log(this.isSticky)
+  }
 
   constructor(private judoService:JudoService) { }
 

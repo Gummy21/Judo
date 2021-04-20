@@ -1,9 +1,9 @@
-$primary-color:#073b4c;
-
+$primary-color:#014F86;
+$secondary-color:#660708;
 .home-header {
-    background-color: $primary-color;
+    background: $primary-color;
     width:100%;
-    height:40vh;
+    height:50vh;
     display:flex;
     justify-content: center;
     color:white;
@@ -15,17 +15,26 @@ $primary-color:#073b4c;
 }
 
 .site-description{
-    background-color: #E8E6E6;
+    
     width:auto;
     height:100%;
     text-align:center;
     letter-spacing:0.1em;
-    padding:2em 1em;
+    padding:4em 1em 1em 1em;
     
     p{
-        margin:0;
+        margin:1em 0 0 0;
         
     }
+
+    strong{
+        font-size:0.9em;
+       
+    }
+}
+
+.desktop-view{
+    display:contents;
 }
 
 .filter{
@@ -46,26 +55,27 @@ $primary-color:#073b4c;
 
     select,input {
         width:80%;
+        font-family: "Sora", sans-serif;
     }
     input{
         
 
         border: none;
         padding: 10px 0;
-        border-bottom: solid 1px #12293D;
+        border-bottom: solid 1px $secondary-color;
         transition: all 0.3s cubic-bezier(.64,.09,.08,1);
-        background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, #12293D 4%);
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, $secondary-color 4%);
         background-position: -100vw 0;
         background-size:100%;
         background-repeat: no-repeat;
-        color: darken(#12293D, 20%);
+        color: darken($secondary-color, 20%);
         &:focus, &:valid {
             box-shadow: none;
             outline: none;
             background-position: 0 0;
             
             &::-webkit-input-placeholder {
-              color: #12293D;
+              color: $secondary-color;
               font-size: 11px;
               transform: translateY(-20px);
               visibility: visible !important;
@@ -77,13 +87,13 @@ $primary-color:#073b4c;
     select {
         border: none;
         padding: 10px 0;
-        border-bottom: solid 1px #12293D;
+        border-bottom: solid 1px $secondary-color;
         transition: all 0.3s cubic-bezier(.64,.09,.08,1);
-        background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, #12293D 4%);
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, $secondary-color 4%);
         background-position: -100vw 0;
         background-size:100%;
         background-repeat: no-repeat;
-        color: darken(#12293D, 20%);
+        color: darken($secondary-color, 20%);
         &:focus {
             box-shadow: none;
             outline: none;
@@ -92,10 +102,10 @@ $primary-color:#073b4c;
           }
     }
     button {
-        border-radius:8px;
+        border-radius:10px;
         border:none;
         color:white;
-        background: #3b6578;
+        background: $secondary-color;
         padding:0.6rem;
     }
 
@@ -108,24 +118,26 @@ input::-webkit-input-placeholder, select::-webkit-input-placeholder{
 
 
 .cards {
-    padding:0 0.5em 5rem 0.5em;
+    padding:0 1em 5rem 1em;
     
     height:100%;
 
 }
 
 .card {
-    padding:5rem 0;
+    display:flex;
+    flex-direction: column;
+    margin: 3em 0 5em 0;
     width:100%;
-
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     h2 {
         text-align:left;
         padding-left:0.5rem;
     }
     
     .card-bot {
-    
-        text-align: center;
+        padding-bottom:1em;
+       
     }
     
 
@@ -134,12 +146,19 @@ input::-webkit-input-placeholder, select::-webkit-input-placeholder{
         width:100%;
         
     }
+
+    p {
+        text-align:center;
+    }
+
     button {
-        border-radius:10px;
+        border-radius:15px;
+        width:20%;
         border:0;
         color:white;
-        background: #3b6578;
-        padding:0.8em;
+        background: #660708;
+        padding:0.5em;
+        margin-left:0.5em;
     }
 
    
@@ -152,90 +171,119 @@ input::-webkit-input-placeholder, select::-webkit-input-placeholder{
 // Media queries
 
 @media (min-width:768px){
+    .home-header {
+        height:45vh;
+    }
 
-    .home-header{
+    .filter{
+        padding:3em 0 0 1.2rem;
+        width: 75%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: normal;
+        select,input {
+            width:35%
 
-        h1{
-            padding-top:15%;
         }
-    }
+        button {
+            padding: 0.4em .6em;
+            width:10%;
+            height:40%;
+            margin:2em 0 0 0 ;
 
-    .site-description {
-        padding: 4em 2em;
-    }
-
-    .filter {
-
-
-        input,select {
-            width:50%;
         }
     }
 
     .cards {
-        padding:0 5rem 5rem 5rem ;
-    }
-
-    .card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
         
-        img {
-            width:100%
-
-        }
     }
+    .card {
+        width:45%;
+        height:100%;
+        
+        .card-bot {
+            display: flex;
+            flex-direction: column;
+            height: 12em;
+            h2 {
+                font-size:1.2em;
+            }
+        }
+        img {
+            height:11em !important;
+        }
+        .button-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height:100%;
+        }
+     
+    }
+    
 }
-
-
 
 @media (min-width:1024px){
-
     .home-header{
-        height:60vh;
-
-        h1{
-            padding-top:10%;
-        }
+        height:70vh;
+        
     }
 
-    .site-description {
-        padding: 6em 2em;
-    }
-
-    .filter {
-
-
-        input,select {
-            width:50%;
-            font-size:18px;
-        }
-    }
-
-    .cards {
-        padding:0 10% 5rem 10% ;
+    main{
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction:row-reverse;
     }
-
-    .card {
-        width:40%;
-        padding:5rem 0 5rem 4rem;
-        img {
-            width:100%
+    .site-description{
+        width:33%;
+        text-align:left;
+        h1{
+            font-size:1.3em;
+            text-align:left;
+            margin:0;
+            letter-spacing:0.2em;
 
         }
+        h1:after {
+                content: " ";
+                margin-top: 20px;
+                display: block;
+                border: 1px solid $secondary-color;
+                max-width:66%;
+            }
+    }
+    .desktop-view{
+        display: block;
+        width:66%;
+        padding-left:2%;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+    
+    .card {
+        height:auto;
+    }
+    .cards {
+        padding:0;
+        height:auto;
+    }
+    .filter {
+        padding-top:2em;
+        padding-left:0.4rem;
+    }
+
+    .fixed {
+        position:sticky;
+        top:50px;
     }
 }
 
-
-@media (min-width:1444px){
-
-
-    .filter {
-        padding-left:4rem;
-        input,select {
-            width:35%;
-            font-size:18px;
-        }
+@media (min-width:1800px){
+    .card{
+        width:40%;
+    }
+    .filter{
+        padding-left:2.8em;
     }
 }
