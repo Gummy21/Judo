@@ -8,11 +8,28 @@ $secondary-color:#660708;
     justify-content: center;
     color:white;
     
-    h1 {
-        margin:0;
-        padding-top:1em;
+    #header-img {
+        width:100%;
+        height: auto;
+        background: 
+        linear-gradient(
+        rgba(1, 79, 134, 0.5), 
+        rgba(1, 79, 134, 0.5)),
+        url("../../assets/banner.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:cover;
+        display:flex;
+        justify-content:center;
+        align-items: center;
+
+        h1{
+            color:rgb(253, 252, 252);
+        }
     }
+
 }
+
 
 .site-description{
     
@@ -107,6 +124,7 @@ $secondary-color:#660708;
         color:white;
         background: $secondary-color;
         padding:0.6rem;
+        cursor:pointer;
     }
 
 }
@@ -159,6 +177,7 @@ input::-webkit-input-placeholder, select::-webkit-input-placeholder{
         background: #660708;
         padding:0.5em;
         margin-left:0.5em;
+        cursor:pointer;
     }
 
    

@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
     this.isSticky = window.pageYOffset >= 450;
-    console.log(this.isSticky)
+    
   }
 
   constructor(private judoService:JudoService) { }
@@ -32,14 +32,14 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit(){
    
     this.judoService.getMoves(this.category,this.name).pipe(takeUntil(this.unsub)).subscribe(moves =>{
-      console.log(moves)
+      
       this.judo = moves
     })
   }
 
   filter(){
     this.judoService.getMoves(this.category,this.name).pipe(takeUntil(this.unsub)).subscribe(moves =>{
-      console.log(moves)
+      
       this.judo = moves
     });
   }

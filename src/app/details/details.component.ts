@@ -22,7 +22,7 @@ export class DetailsComponent implements OnInit,OnDestroy {
 
   ngOnInit() {
     this.judoService.getSingle(this.id).pipe(takeUntil(this.unsub)).subscribe(single =>{
-      console.log(single)
+      
       this.move = single
       this.video = this.move[0].video 
       this.safe = this.dom.bypassSecurityTrustResourceUrl(this.video)
