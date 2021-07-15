@@ -6,9 +6,8 @@ import { DetailsComponent } from './details/details.component'
 const routes: Routes = [
   {path:'home', component:HomeComponent},
   {path:'detail/:id', component:DetailsComponent},
-  { path: '/**', redirectTo: 'home', pathMatch: 'full' },
-  {path:'', redirectTo:'home', pathMatch: 'full'},
-  {path:'/home', redirectTo:'home', pathMatch: 'full'},
+  { path: '**', redirectTo: 'home', pathMatch: 'full' },
+  {path:'', redirectTo:'home', pathMatch: 'full'}
 ];
 
 @NgModule({
