@@ -125,6 +125,11 @@ $secondary-color:#660708;
         background: $secondary-color;
         padding:0.6rem;
         cursor:pointer;
+        transition:all 0.5s ease;
+        &:hover {
+            background-color:$primary-color;
+
+        }
     }
 
 }
@@ -178,6 +183,10 @@ input::-webkit-input-placeholder, select::-webkit-input-placeholder{
         padding:0.5em;
         margin-left:0.5em;
         cursor:pointer;
+        transition: all 0.5s ease;
+        &:hover {
+            background-color:$primary-color;
+        }
     }
 
    
@@ -290,6 +299,9 @@ input::-webkit-input-placeholder, select::-webkit-input-placeholder{
     .filter {
         padding-top:2em;
         padding-left:0.4rem;
+        button {
+            padding:2%;
+        }
     }
 
     .fixed {

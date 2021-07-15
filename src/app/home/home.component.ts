@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, HostListener} from '@angular/core';
 import { JudoService } from '../services/judo.service'
-
+import { trigger, state, style, animate, transition } from '@angular/animations';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
@@ -8,7 +8,16 @@ import { takeUntil } from 'rxjs/operators';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  animations: [
+    trigger('fadein', 
+      [
+        transition(':enter', [
+            style({opacity: 0 }),
+            animate('0.7s ease-out', 
+              style({opacity: 1 }))
+          ])
+      ])]
 })
 
 
