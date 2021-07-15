@@ -33,7 +33,7 @@
       <option value="7">Shime-Waza (Choking Techniques)</option>
       <option value="8">Kansetsu-Waza (Joint Locking Techniques)</option>
     </select>
-    <input required="" placeholder="Name of Judo move" type="text"/>
+    <input required="" [(ngModel)]="name" placeholder="Name of Judo move" type="text"/>
   
     <button (click)="filter()">Apply</button>
   </section>
