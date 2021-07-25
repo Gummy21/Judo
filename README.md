@@ -6,6 +6,8 @@ Judo is a movelist to view the standard syllabus of Judo techniques.
 
 The front-end of a Judo movelist app.
 
+Back-end at: https://github.com/Gummy21/Judo-API
+
 ![Judo](./Judo.PNG)
 
 ## Technologies
